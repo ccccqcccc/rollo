@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  bitcoin:
+    container_name: bitcoin
+    image: ruimarinho/bitcoin-core:latest
+    command: -printtoconsole -prune=550 -maxmempool=300 -maxconnections=10
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./bitcoin.conf:/root/.bitcoin/bitcoin.conf
+      - ./bitcoin.conf:/home/bitcoin/.bitcoin/bitcoin.conf
+      - bitcoin:/home/bitcoin/.bitcoin
+    ports:
+      - 8332:8332
+    networks:
+      - rollo
+  # ethereum:
+  #　　container_name: ethereum
+  #   image: ethereum/client-go:stable
+  #   entrypoint: /bin/sh
+  #   restart: always
+  #   stdin_open: true
+  #   tty: true
+  #   volumes:
+  #     - ethereum:/root/.ethereum
+  #   ports:
+  #     - 8545:8545
+  #   networks:
+  #     - rollo
+networks:
+  rollo:
+    driver: bridge
+volumes:
+  bitcoin:
+  # ethereum:
