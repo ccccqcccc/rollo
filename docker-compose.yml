@@ -16,9 +16,9 @@ services:
     networks:
       - rollo
   # ethereum:
-  #　　container_name: ethereum
+  #   container_name: ethereum
   #   image: ethereum/client-go:stable
-  #   entrypoint: /bin/sh
+  #   command: --syncmode light --http
   #   restart: always
   #   stdin_open: true
   #   tty: true
@@ -26,8 +26,6 @@ services:
   #     - ethereum:/root/.ethereum
   #   ports:
   #     - 8545:8545
-  #   networks:
-  #     - rollo
 networks:
   rollo:
     driver: bridge
