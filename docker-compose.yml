@@ -3,7 +3,7 @@ services:
   bitcoin:
     container_name: bitcoin
     image: ruimarinho/bitcoin-core:latest
-    command: -printtoconsole -prune=550 -maxmempool=300 -maxconnections=10
+    command: -printtoconsole -blocksonly -prune=550 -maxmempool=5 -maxconnections=5
     restart: always
     stdin_open: true
     tty: true
