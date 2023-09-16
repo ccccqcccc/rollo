@@ -15,6 +15,7 @@ services:
       - 8332:8332
     networks:
       - rollo
+      - shared
   # ethereum:
   #   container_name: ethereum
   #   image: ethereum/client-go:stable
@@ -29,6 +30,8 @@ services:
 networks:
   rollo:
     driver: bridge
+  shared:
+    external: true
 volumes:
   bitcoin:
   # ethereum:
