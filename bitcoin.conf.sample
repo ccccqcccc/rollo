@@ -1,2 +1,5 @@
 rpcuser=
 rpcpassword=
+rpcallowip=0.0.0.0/0
+rpcbind=0.0.0.0
+rpcport=8322
