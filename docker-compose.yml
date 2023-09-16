@@ -11,8 +11,6 @@ services:
       - ./bitcoin.conf:/root/.bitcoin/bitcoin.conf
       - ./bitcoin.conf:/home/bitcoin/.bitcoin/bitcoin.conf
       - bitcoin:/home/bitcoin/.bitcoin
-    ports:
-      - 8332:8332
     networks:
       - rollo
       - shared
