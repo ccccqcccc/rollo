@@ -7,8 +7,6 @@ services:
     restart: always
     stdin_open: true
     tty: true
-    ports:
-      - 8322:8322
     volumes:
       - ./bitcoin.conf:/root/.bitcoin/bitcoin.conf
       - ./bitcoin.conf:/home/bitcoin/.bitcoin/bitcoin.conf
